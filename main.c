@@ -15,7 +15,7 @@
  */
 int main(void) {
 	WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
-
+//comment for git assignment
 	int stream1[] = { 45, 42, 41, 40, 43, 45, 46, 47, 49, 45 };
 	int stream2[] = { 174, 162, 149, 85, 130, 149, 153, 164, 169, 173 };
 
