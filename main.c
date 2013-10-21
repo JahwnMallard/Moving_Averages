@@ -6,16 +6,16 @@
   * Supports any sample size, however, requires
   * that the user input the size of the stream
 *******************************************/
+
 #include <msp430.h> 
-#include "Moving_Averages.h"
+#include "moving_averages.h"
+
 #define SAMPLE_SIZE_1 2
 #define SAMPLE_SIZE_2 4
-/*
- * main.c
- */
+
 int main(void) {
 	WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
-//comment for git assignment
+
 	int stream1[] = { 45, 42, 41, 40, 43, 45, 46, 47, 49, 45 };
 	int stream2[] = { 174, 162, 149, 85, 130, 149, 153, 164, 169, 173 };
 
@@ -59,7 +59,6 @@ int main(void) {
 	max_1 = max(stream1, 10);
 	min_1 = min(stream1, 10);
 	range_1 = range(stream1, 10);
-
 
 	return 0;
 }

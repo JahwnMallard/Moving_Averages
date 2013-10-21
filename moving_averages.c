@@ -6,12 +6,13 @@
   * getAverage, addSample, min, max, and range
 *******************************************/
 
-#include "Moving_Averages.h";
+#include "moving_averages.h";
 
 //returns the average of the array
 int getAverage(int array[], unsigned int arrayLength) {
 	int sum = 0;
 	int i;
+
 	for ( i = 0; i < arrayLength; i++) {
 		sum += array[i];
 	}
@@ -22,9 +23,11 @@ int getAverage(int array[], unsigned int arrayLength) {
 //shifts out the value at index 0, moves everything down 1 index. It then moves in the sample value at the last index
 void addSample(int sample, int array[], unsigned int arrayLength) {
 	int i;
+
 	for ( i = 1; i < arrayLength; i++) {
 		array[i - 1] = array[i];
 	}
+
 	array[arrayLength - 1] = sample;
 }
 
@@ -32,6 +35,7 @@ void addSample(int sample, int array[], unsigned int arrayLength) {
 int max(int array[], unsigned int arrayLength) {
 	int i;
 	int max = 0;
+
 	for ( i = 0; i < arrayLength; i++) {
 		if (array[i] > max) {
 			max = array[i];
@@ -46,6 +50,7 @@ int min(int array[], unsigned int arrayLength) {
 	//initial value for comparison
 	int min = array[0];
 	int i;
+
 	for ( i = 1; i < arrayLength; i++) {
 		if (array[i] < min) {
 			min = array[i];
@@ -60,6 +65,7 @@ unsigned int range(int array[], unsigned int arrayLength) {
 	int max = 0;
 	int min = array[0];
 	int i;
+
 	for ( i = 0; i < arrayLength; i++) {
 		if (array[i] > max) {
 			max = array[i];

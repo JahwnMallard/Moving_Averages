@@ -9,7 +9,6 @@
 #ifndef MOVING_AVERAGES_H_
 #define MOVING_AVERAGES_H_
 
-
 // Moving average functions
 int getAverage(int array[], unsigned int arrayLength);
 void addSample(int sample, int array[], unsigned int arrayLength);
